@@ -1,0 +1,11 @@
+{
+  "name": "test-charts-p3",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@vaadin/vaadin-charts": "vaadin/vaadin-charts.git#p3-preview-rb-test"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}
