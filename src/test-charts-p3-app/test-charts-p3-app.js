@@ -14,13 +14,21 @@ class TestChartsP3App extends PolymerElement {
       <style>
         :host {
           display: grid;
-          grid-template-columns: 50% 50%;
-          grid-gap: 50px;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 30px;
+          padding: 30px;
           background-color: lightsteelblue;
         }
         
         vaadin-chart:hover {
-        
+          animation: breathe 5s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+          0% { transform: none }
+          45% { transform: scale(1.05) }
+          55% { transform: scale(1.05) }
+          100% { transform: none }
         }
       </style>
       
@@ -44,6 +52,9 @@ class TestChartsP3App extends PolymerElement {
                         "crosshairs": true,
                         "shared": true,
                         "valueSuffix": "°C"
+                      },
+                      "exporting": {
+                        "enabled": true
                       }
                     }'>
         <vaadin-chart-series title="Temperatures"
@@ -1853,8 +1864,9 @@ class TestChartsP3App extends PolymerElement {
         </vaadin-chart-series>
       </vaadin-chart>
 
-      <vaadin-chart title="Speedometer" 
-                    type="gauge" 
+      <vaadin-chart theme="speedometer"
+                    title="Speedometer" 
+                    type="gauge"
                     additional-options='{
                       "yAxis": {
                         "min": 0,
@@ -1873,11 +1885,11 @@ class TestChartsP3App extends PolymerElement {
         </vaadin-chart-series>
       </vaadin-chart>
       
-      <vaadin-chart type="column" chart3d categories='["Apples", "Oranges"]'>
-        <vaadin-chart-series title="John" values="[5,3]" stack="male" stacking="normal"></vaadin-chart-series>
-        <vaadin-chart-series title="Joe" values="[1,2]" stack="male" stacking="normal"></vaadin-chart-series>
-        <vaadin-chart-series title="Jane" values="[4,16]" stack="female" stacking="normal"></vaadin-chart-series>
-        <vaadin-chart-series title="Janet" values="[9,5]" stack="female" stacking="normal"></vaadin-chart-series>
+      <vaadin-chart type="column" chart3d categories='["Apples", "Oranges"]' stacking="normal">
+        <vaadin-chart-series title="John" values="[5,3]" stack="male"></vaadin-chart-series>
+        <vaadin-chart-series title="Joe" values="[1,2]" stack="male"></vaadin-chart-series>
+        <vaadin-chart-series title="Jane" values="[4,16]" stack="female"></vaadin-chart-series>
+        <vaadin-chart-series title="Janet" values="[9,5]" stack="female"></vaadin-chart-series>
       </vaadin-chart>
     `;
   }
