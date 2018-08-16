@@ -2,7 +2,7 @@
   "name": "test-charts-p3",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
-    "@vaadin/vaadin-charts": "vaadin/vaadin-charts.git#p3-preview-rb-test"
+    "@vaadin/vaadin-charts": "vaadin/vaadin-charts.git#p3-test"
   },
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.0",
